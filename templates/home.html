@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        background-color: aquamarine;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .text {
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    select {
+        margin-top: 6px;
+        margin-bottom: 6px;
+        background-color: aliceblue;
+        height: 40px;
+        width: 350px;
+        text-align: center;
+        font-size: 20px;
+        font-style: italic;
+        border: solid black;
+    }
+
+    input {
+        margin-top: 6px;
+        margin-bottom: 6px;
+        background-color: aliceblue;
+        height: 35px;
+        width: 342px;
+        text-align: center;
+        font-size: 20px;
+        font-style: italic;
+        border: solid black;
+    }
+
+    button {
+        margin-top: 23px;
+        height: 45px;
+        width: 200px;
+        font-size: 20px;
+        border: 4px solid black;
+    }
+</style>
+
+<body>
+    <form action="{{url_for('predict_data')}}" method="POST">
+        <h1>Welcome to the rating prediction of the restraunt</h1>
+        <div class="text">
+            <b>Online order</b>
+            <select style="margin-left: 98px;" name="online_order" required>
+                <option value="">please select an option below</option>
+                <option>Yes</option>
+                <option>No</option>
+            </select><br>
+            <!-- <b>Book Table</b>
+            <input type="number" name="MRP" placeholder="Insert the MRP" required><br> -->
+            <b>Book Table</b>
+            <select style="margin-left: 120px;" name="Book_Table" required>
+                <option value="">please select an option below</option>
+                <option>Yes</option>
+                <option>No</option>
+            </select><br>
+
+            <b>Number of Votes</b>
+            <input type="number" style="margin-left: 50px;" name="Votes" placeholder="Enter the no of votes "
+                required><br>
+
+            <b>Number Of Cuisines</b>
+            <select style="margin-left: 0px;" name="cuisines" required>
+                <option value="">please select an option below</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+
+
+            </select><br>
+
+            <b>Approx cost 2 person</b>
+            <input type="number"  name="Approx_cost" placeholder="Enter the cost"
+                required><br>
+
+
+            <!-- <b>Outlet Establishment Year</b>
+            <input type="number" name="Establishment" placeholder="Enter the establishment year " required><br> -->
+            <b>Menu</b>
+            <select style="margin-left: 188px;" name="menu" required>
+                <option value="">please select an option below</option>
+                <option>Menu available</option>
+                <option>Menu not available</option>
+            </select><br>
+
+            <b style="margin-right: 4px;">Type of restraunt</b>
+            <select style="margin-left: 40px;" name="listed_in" required>
+                <option value="">please select an option below</option>
+                <option>Delivery</option>
+                <option>Dine-out</option>
+                <option>Desserts</option>
+                <option>Cafes</option>
+                <option>Buffet</option>
+                <option>Drinks & nightlife</option>
+                <option>Pubs and bars</option>
+            </select><br>
+            <!-- <b>Item Visibility</b>
+            <input type="number" name="Item_Visibility" placeholder="between 0 - 1"><br> -->
+            <button type="submit" name="submit">Predict The Rating</button>
+        </div>
+    </form>
+</body>
+
+</html>
